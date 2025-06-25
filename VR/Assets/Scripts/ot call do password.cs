@@ -8,7 +8,7 @@ public class PanelAutoSwitcher : MonoBehaviour
     public GameObject panelToActivateNext;  // The panel that should activate after delay
 
     [Header("Timing")]
-    public float delaySeconds = 40f;         // Time to wait before switching
+    public float delaySeconds = 30f;         // Time to wait before switching
 
     // Call this when the auto-close panel is activated
     public void StartAutoSwitch()
