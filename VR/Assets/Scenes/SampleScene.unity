@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4372290
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2668,6 +2668,7 @@ GameObject:
   - component: {fileID: 294130680}
   - component: {fileID: 294130682}
   - component: {fileID: 294130683}
+  - component: {fileID: 294130684}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2716,9 +2717,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 233f4c2b6dc9f3d47850ae30d38e59b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayInteractor: {fileID: 1627858196}
-  canvasRect: {fileID: 1791956652}
-  cursorRect: {fileID: 747122168}
 --- !u!114 &294130683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2731,11 +2729,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f4befc25dc7c954ba2df42e4cf1cd9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputField: {fileID: 62907174}
   feedbackText: {fileID: 0}
   panelToDisable: {fileID: 0}
   panelToEnable: {fileID: 0}
-  sendButton: {fileID: 0}
+--- !u!114 &294130684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294130679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f94a347b98417042bf4eedb54c0e3d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelToAutoClose: {fileID: 888217307}
+  panelToActivateNext: {fileID: 612516854}
+  delaySeconds: 0
 --- !u!1 &329674977
 GameObject:
   m_ObjectHideFlags: 0
@@ -5499,7 +5510,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &612516855
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14653,17 +14664,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624025054}
   m_CullTransparentMesh: 1
---- !u!114 &1627858196 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4972139753948832970, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
-  m_PrefabInstance: {fileID: 2779669268269126897}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1629811581
 GameObject:
   m_ObjectHideFlags: 0
@@ -16878,7 +16878,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1954195296
 RectTransform:
   m_ObjectHideFlags: 0
