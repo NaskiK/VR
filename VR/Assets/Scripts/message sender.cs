@@ -15,15 +15,14 @@ public class SendAndSwitch : MonoBehaviour
         if (feedbackText != null)
             feedbackText.text = "Sent";
 
+            panelToDisable.SetActive(false);
+
         StartCoroutine(SwitchPanelsAfterDelay(3f));
     }
 
     private IEnumerator SwitchPanelsAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-
-        if (panelToDisable != null)
-            panelToDisable.SetActive(false);
 
         if (panelToEnable != null)
             panelToEnable.SetActive(true);

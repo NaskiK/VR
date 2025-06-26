@@ -3,27 +3,25 @@ using System.Collections;
 
 public class PanelAutoSwitcher : MonoBehaviour
 {
-    [Header("Panels")]
-    public GameObject panelToAutoClose;     // The panel that should deactivate
-    public GameObject panelToActivateNext;  // The panel that should activate after delay
+    [Header("Optional – panel that should disappear after the wait")]
+    public GameObject panelToAutoClose;
+
+    [Header("What should appear after the wait")]
+    public GameObject panelToActivateNext;
 
     [Header("Timing")]
-    public float delaySeconds = 40f;         // Time to wait before switching
+    public float delaySeconds = 40f;
 
-    // Call this when the auto-close panel is activated
-    public void StartAutoSwitch()
+    private void OnEnable()                 // fires when THIS panel becomes active
     {
         StartCoroutine(SwitchAfterDelay());
     }
 
     private IEnumerator SwitchAfterDelay()
     {
-        yield return new WaitForSeconds(delaySeconds);
+        yield return new WaitForSecondsRealtime(delaySeconds); // ignores Time.timeScale
 
-        if (panelToAutoClose != null)
-            panelToAutoClose.SetActive(false);
-
-        if (panelToActivateNext != null)
-            panelToActivateNext.SetActive(true);
+        if (panelToActivateNext) panelToActivateNext.SetActive(true);
+        if (panelToAutoClose) panelToAutoClose.SetActive(false);
     }
 }
