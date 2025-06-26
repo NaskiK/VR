@@ -2766,6 +2766,7 @@ GameObject:
   - component: {fileID: 294130680}
   - component: {fileID: 294130683}
   - component: {fileID: 294130684}
+  - component: {fileID: 294130685}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2832,6 +2833,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelToDisable: {fileID: 2102443230}
   panelToEnable: {fileID: 4372289}
+--- !u!114 &294130685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294130679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eab6a9cc8c9da9449940c1474a6f51c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HackerScene: 
+  delay: 10
 --- !u!1 &301198263
 GameObject:
   m_ObjectHideFlags: 0
@@ -9747,6 +9762,18 @@ MonoBehaviour:
       - m_Target: {fileID: 294130684}
         m_TargetAssemblyTypeName: PanelSwitcherr, Assembly-CSharp
         m_MethodName: SwitchPanelss
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 294130685}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeSceneWithDelay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
